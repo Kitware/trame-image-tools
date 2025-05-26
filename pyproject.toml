@@ -37,6 +37,10 @@ build-backend = 'setuptools.build_meta'
 
 [tool.setuptools.packages.find]
 where = ["."]
+# Editable installs don't work with the namespace packages if we
+# include "trame" in this list. We must explicitly include "trame.modules"
+# and "trame.widgets" instead.
+include = ["trame.modules", "trame.widgets", "trame_image_tools"]
 
 [tool.setuptools.package-data]
 trame_image_tools = [
@@ -71,7 +75,6 @@ select = ["E", "W", "F"]
 ignore = []
 fixable = ["ALL"]
 unfixable = []
-
 
 [tool.ruff.format]
 quote-style = "double"
