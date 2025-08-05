@@ -238,7 +238,7 @@ onBeforeUnmount(() => {
 <template>
   <svg
     ref="svg-root"
-    @wheel="onWheel"
+    @wheel.prevent="onWheel"
     @mousedown="onMouseDown"
     version="1.1"
     width="100%"
