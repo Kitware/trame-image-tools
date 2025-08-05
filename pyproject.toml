@@ -1,6 +1,6 @@
 [project]
 name = "trame-image-tools"
-version = "1.0.1"
+version = "1.0.2"
 description = "A trame package to display, manipulate, and select regions in images."
 authors = [
     {name = "Alessandro Genova"},
